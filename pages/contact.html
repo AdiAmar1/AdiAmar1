@@ -8,10 +8,10 @@
     <meta name="description" content="Zitec - צור קשר" />
     <meta name="author" content="Zitec" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Zitec - צור קשר</title>
+    <title>Zitec- צור קשר </title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="shortcut icon" href="../images/zitec/ZITEC-Z.png" />
 
     <!-- Google Fonts - Poppins and Open Sans -->
     <link
@@ -99,6 +99,47 @@
             font-size: 13px !important;
             padding: 8px 15px !important;
         }
+
+        .waze-btn {
+            background-color: #05C8E8;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
+        }
+
+        .waze-btn:hover {
+            background-color: #009ec2;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.626);
+            color: #fff;
+        }
+
+        .waze-btn:active {
+            transform: translateY(0);
+        }
+
+        .waze-btn svg {
+            display: inline-block;
+        }
+
+        #contact-form-main .form-control {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #contact-form-main .row>[class*="col-"] {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     </style>
 
 </head>
@@ -178,7 +219,7 @@ mega menu -->
                                             <li><a href="./services.html?tab=additional"> שירותים נוספים</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="../docs/ת.איזו - 2024.pdf" target="_blank"> תעודת הסמכה </a>
+                                    <li><a href="../docs/iso.pdf" target="_blank"> תעודת הסמכה </a>
                                         <!-- drop down full width -->
 
                                     </li>
@@ -227,26 +268,7 @@ Contact Page Hero -->
             </div>
         </div>
     </section>
-    <!-- <section class="contact-hero page-section-ptb bg" style="background: url(../images/bg/bg-7.jpg); background-size: cover; background-position: center;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="section-title">
-                        <h2 class="title" style="color: #fff; font-size: 48px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">צרו איתנו קשר</h2>
-                        <p style="color: #fff; font-size: 18px; margin-top: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-                            נשמח לענות על כל שאלה ולסייע לכם במציאת הפתרון המושלם לצרכים שלכם
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!--=================================
-Contact Hero End -->
-
-    <!--=================================
-Contact Form Section -->
+    
 
     <section class="contact-section page-section-ptb white-bg">
         <div class="container">
@@ -262,11 +284,13 @@ Contact Form Section -->
                                     <div class="info-icon">
                                         <i class="fa fa-map-marker"></i>
                                     </div>
-                                    <div class="info-content">
+                                    <div class="info-content" >
                                         <h5>כתובת</h5>
-                                        <p>
+                                        <p style="display: flex; flex-direction: column; align-items: center;">
+                                            <span style="margin-right: -40px;">לחץ כאן לפתיחה במפה</span>
+                
                                             <a href="https://maps.google.com/?q=הסדנא+16,+חולון" target="_blank"
-                                                style="color: inherit; text-decoration: none;">
+                                                style="color: inherit; text-decoration: none; ">
                                                 משרדי Zitec - הסדנא 16, חולון
                                             </a>
                                         </p>
@@ -311,11 +335,25 @@ Contact Form Section -->
                                             יום ו': 08:00 - 13:00</p>
                                     </div>
                                 </div>
+                                <div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+                                    <a id="wazeFooterBtn"
+                                        href="https://waze.com/ul?q=%D7%94%D7%A1%D7%93%D7%A0%D7%90%2016%2C%20%D7%97%D7%95%D7%9C%D7%95%D7%9F&navigate=yes"
+                                        target="_blank" rel="noopener" class="waze-btn" aria-label="נווט עם Waze">
+                                        <!-- Waze icon (inline SVG so it always loads) -->
+                                        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                                            <path
+                                                d="M17.3 3.6c3.3 0 5.7 2.5 5.7 5.8 0 3.3-2.4 6.5-6.1 6.5-.5 0-1 0-1.6-.1-.3 1.3-1.5 2.3-2.9 2.3-.9 0-1.7-.4-2.2-1-.6.6-1.5 1-2.4 1-.9 0-1.7-.3-2.3-.9l-.1-.1-.2.1c-.5.2-1.1.4-1.8.4-.4 0-.7-.3-.7-.7 0-.3.2-.6.5-.7.6-.1 1.1-.2 1.5-.4.2-.1.4-.2.6-.3-.3-.7-.5-1.4-.5-2.2 0-4.3 3.4-7.6 7.6-7.6h1.4Zm-.1 1.5h-1.3c-3.4 0-6.2 2.7-6.2 6.1 0 .7.1 1.4.4 2 .2.4.1.9-.3 1.2l-.1.1c-.2.2-.5.3-.7.5.3.1.6.2 1 .2.4 0 .8-.2 1.1-.5.3-.4.9-.4 1.3-.1.3.3.7.5 1.1.5.9 0 1.6-.7 1.6-1.6 0-.4.3-.8.8-.8.7.1 1.2.1 1.7.1 2.8 0 4.6-2.2 4.6-5 0-2.5-1.9-4.3-4.6-4.3ZM9 10.3c.4 0 .8.3.8.8s-.4.8-.8.8a.8.8 0 0 1 0-1.6Zm4 0c.4 0 .8.3.8.8s-.4.8-.8.8a.8.8 0 0 1 0-1.6Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                        <span>נווט עם Waze</span>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- Contact Form -->
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <div class="contact-form-wrapper">
                                 <div class="section-title mb-4">
                                     <h3 class="title">שלחו לנו הודעה</h3>
@@ -389,25 +427,31 @@ footer -->
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-30">
                     <div class="footer-about">
 
-                        <div class="footer-address mt-20">
+                        <div class="footer-address mt-20" style="width: 100%; display: flex; flex-direction: column; align-items:flex-start;">
                             <ul class="list-inline">
-                                <li
-                                    style="width: 100%; display: flex; flex-direction: row-reverse; justify-content: center;">
-                                    <i class="fa fa-map-marker"></i>
-                                    <a href="https://maps.google.com/?q=הסדנא+16,+חולון" target="_blank"
-                                        style="color: inherit; text-decoration: none;">
-                                        <span>משרדי Zitec- הסדנא 16, חולון</span>
-                                    </a>
+                                <li style="width: 100%; display: flex; flex-direction: column; align-items:flex-start;">
+                                    <div style="display: flex; flex-direction: row; align-items:flex-start; justify-content:center;">
+                                        <span >לחץ כאן לפתיחה במפה</span>
+                                        <i class="fa fa-angle-down fa-indicator" style="color: rgb(171, 171, 171);"></i>
+                                    </div>
+                                    <div style="margin-top: 0px;">
+                                        <a href="https://maps.google.com/?q=הסדנא+16,+חולון" target="_blank"
+                                            style="color: inherit; text-decoration: none;">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>משרדי Zitec- הסדנא 16, חולון</span>
+
+                                        </a>
+                                    </div>
                                 </li>
                                 <li
-                                    style="width: 100%; display: flex; flex-direction: row-reverse; justify-content: center;">
+                                    style="width: 100%; display: flex; flex-direction: row-reverse; justify-content: flex-end;">
                                     <i class="fa fa-phone"></i>
                                     <a href="tel:03-5589014" style="color: inherit; text-decoration: none;">
                                         <span> טלפון: 03-5589014</span>
                                     </a>
                                 </li>
                                 <li
-                                    style="width: 100%; display: flex; flex-direction: row-reverse; justify-content: center;">
+                                    style="width: 100%; display: flex; flex-direction: row-reverse; justify-content: flex-end;">
                                     <i class="fa fa-envelope"></i>
                                     <a href="mailto:Info@zitec.co.il" style="color: inherit; text-decoration: none;">
                                         <span> דוא"ל: Info@zitec.co.il </span>
@@ -527,6 +571,28 @@ footer -->
                             }
                         });
                     </script>
+                    <script>
+                        (function () {
+                            const btn = document.getElementById('wazeFooterBtn');
+                            if (!btn) return;
+
+                            // Destination (Hebrew) – feel free to change to an exact business name if you prefer
+                            const destination = 'הסדנא 16, חולון';
+
+                            // Build Waze URL (search by query). You can also switch to lat/lon when you have coordinates:
+                            // const url = 'https://waze.com/ul?ll=31.9669,34.8124&navigate=yes';
+                            // היה קודם: https://waze.com/ul?q=...&navigate=yes
+                            const url = 'https://www.waze.com/he/live-map/directions/%D7%96%D7%99%D7%98%D7%A7-%D7%96%D7%99%D7%95%D7%95%D7%93-%D7%95%D7%98%D7%9B%D7%A0%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%95%D7%AA-%D7%91%D7%A2%D7%9E-%D7%94%D7%A1%D7%93%D7%A0%D7%90-16-%D7%97%D7%95%D7%9C%D7%95%D7%9F?to=place.w.22806848.228068482.233273';
+
+
+                            // Ensure clean open in a new tab/window and prevent double navigation if href is present
+                            btn.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                window.open(url, '_blank', 'noopener');
+                            });
+                        })();
+                    </script>
+
                 </div>
 
             </div>
